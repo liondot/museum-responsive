@@ -71,41 +71,33 @@ header {
     float: left;
 }
 
-.gnb {
+.menu {
     display: none;
 }
 
-/* .gnb {
-    float: right;
-    position: absolute;
-    right: 60px;
-    top: 100%;
+/* trigger  */
+.trigger {
+    display: none;
 }
 
-.menu a {
-    display: block;
-    text-align: right;
-    margin: 15px 0;
-    position: relative;
-    padding: 5px 0;
-    transition: .3s;
+/* hiring  */
+.btn_hiring {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.5);
+    transition: .5s;
 }
 
-.menu a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background-color: #006064;
-    right: 0;
-    top: 100%;
-    transition: .3s;
+.btn_hiring .fa {
+    transform: rotateY(180deg);
+    margin-right: 5px;
 }
 
-.menu a:hover {
-    font-weight: bold;
+.btn_hiring:active {
+    transform: scale(0.6);
 }
-
-.menu a:hover:after {
-    width: 100%;
-} */

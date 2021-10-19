@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>responsive web</title>
+  <title>Museum</title>
   <script src="js/jquery-2.1.4.js"></script>
   <!-- Page Scroll Effects JS & CSS -->
   <script src="js/velocity/modernizr.js"></script>
@@ -11,8 +11,10 @@
   <script src="js/velocity/velocity.ui.min.js"></script>
   <script src="js/velocity/main.js"></script>
   <link rel="stylesheet" href="js/velocity/velocity.css">
+  <!-- Smooth Scrolling  -->
+  <script src="js/jquery.scrollTo.min.js"></script>
   <!-- Custom JS & CSS -->
-  <script src="custom.js" defer></script>
+  <script src="custom.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
 </head>
@@ -71,7 +73,7 @@
       <header>
         <div class="gnb-inner">
             <div class="logo">
-                <a href="#none">Brand Logo</a>
+                <a href="#none">Museum Logo</a>
             </div>
             <div class="gnb">
                 <div class="menu">
@@ -84,10 +86,18 @@
                     <a class="menulist" data-link="#contact" href="#contact">Contact</a>
                 </div>
             </div>
+            <div class="trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
   </div>
-
+  <a href="#" class="gototop">
+      <img src="images/gototop.png" alt="">
+  </a>
+  <a href="" class="btn_hiring"><i class="fa fa-commenting"></i>Hiring</a>
   <nav>
     <ul class="cd-vertical-nav">
       <li><a href="#0" class="cd-prev inactive">Next</a></li>
