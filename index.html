@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>responsive web</title>
+  <script src="js/jquery-2.1.4.js"></script>
+  <!-- Page Scroll Effects JS & CSS -->
+  <script src="js/velocity/modernizr.js"></script>
+  <script src="js/velocity/velocity.min.js"></script>
+  <script src="js/velocity/velocity.ui.min.js"></script>
+  <script src="js/velocity/main.js"></script>
+  <link rel="stylesheet" href="js/velocity/velocity.css">
+  <!-- Custom JS & CSS -->
+  <script src="custom.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
+
+<body data-hijacking="on" data-animation="rotate">
+  <div class="container">
+      <section id="home" class="cd-section visible">
+        <div>
+          <div class="content">
+              <img src="images/section1.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section id="about" class="cd-section">
+        <div>
+            <div class="content">
+                <img src="images/section2.png" alt="">
+            </div>
+        </div>
+      </section>
+      <section id="project" class="cd-section">
+        <div>
+            <div class="content">
+                <img src="images/section3.jpg" alt="">
+            </div>
+        </div>
+      </section>
+      <section id="plan" class="cd-section">
+        <div>
+            <div class="content">
+                <img src="images/section4.jpg" alt="">
+            </div>
+        </div>
+      </section>
+      <section id="awards" class="cd-section">
+        <div>
+            <div class="content">
+                <img src="images/section6.jpg" alt="">
+            </div>
+      </section>
+      <section id="location" class="cd-section">
+        <div>
+            <div class="content">
+                <h2>section6</h2>
+            </div>
+        </div>
+      </section>
+      <section id="contact" class="cd-section">
+        <div>
+            <div class="content">
+                <h2>section7</h2>
+            </div>
+        </div>
+      </section>
+      <header>
+        <div class="gnb-inner">
+            <div class="logo">
+                <a href="#none">Brand Logo</a>
+            </div>
+            <div class="gnb">
+                <div class="menu">
+                    <a class="menulist" data-link="#home" href="#home">Home</a>
+                    <a class="menulist" data-link="#about" href="#about">About</a>
+                    <a class="menulist" data-link="#project" href="#project">Project</a>
+                    <a class="menulist" data-link="#plan" href="#plan">Plan & History</a>
+                    <a class="menulist" data-link="#awards" href="#awards">Awards</a>
+                    <a class="menulist" data-link="#location" href="#location">Location</a>
+                    <a class="menulist" data-link="#contact" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+  </div>
+
+  <nav>
+    <ul class="cd-vertical-nav">
+      <li><a href="#0" class="cd-prev inactive">Next</a></li>
+      <li><a href="#0" class="cd-next">Prev</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
