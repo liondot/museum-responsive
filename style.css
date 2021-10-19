@@ -101,3 +101,46 @@ header {
 .btn_hiring:active {
     transform: scale(0.6);
 }
+
+.sns {
+    position: absolute;
+    top: 60%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sns a {
+    display: flex;
+    margin: 5px 0;
+    color: #fff;
+    font-size: 16px;
+    justify-content: center;
+}
+
+
+.scroll_txt {
+    position: fixed;
+    z-index: 100;
+    color: #fff;
+    bottom: 100px;
+    left: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 15px;
+    line-height: 1;
+}
+
+.scroll_txt:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: #fff;
+}
+
+.scroll_txt p {
+    margin: 0;
+}
