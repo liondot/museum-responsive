@@ -144,3 +144,69 @@ header {
 .scroll_txt p {
     margin: 0;
 }
+
+/* ########## section: home ########### */
+/* ########## section: about ########### */
+.about_inner {
+    background: rgba(0, 0, 0, 0.6) url('images/section2.png') no-repeat top center;
+    height: 100%;
+    border: 2px solid black;
+
+}
+
+.about_items {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 250px;
+}
+
+.item {
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.item:hover h3 {
+    color: #cacaca;
+}
+
+.item:hover img {
+    filter: invert(0);
+}
+
+.item img {
+    height: 100px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #fff;
+    float: left;
+    margin-right: 20px;
+    filter: invert(1);
+    transition: .5s;
+}
+
+.item span {}
+
+.item span h3 {
+    color: rgb(83, 167, 236);
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    vertical-align: top;
+    line-height: 1;
+    transition: .5s;
+    letter-spacing: -1px;
+}
+
+.item span p {
+    color: #eee;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+/* ########## section: project ########### */
+/* ########## section: plan ########### */
+/* ########## section: awards ########### */
+/* ########## section: location ########### */
+/* ########## section: contact ########### */
