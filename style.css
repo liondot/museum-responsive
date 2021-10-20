@@ -103,8 +103,8 @@ header {
 }
 
 .sns {
-    position: absolute;
-    top: 60%;
+    position: fixed;
+    top: 50%;
     left: 20px;
     display: flex;
     flex-direction: column;
@@ -116,6 +116,12 @@ header {
     color: #fff;
     font-size: 16px;
     justify-content: center;
+}
+
+.sns p {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
 }
 
 
@@ -151,20 +157,19 @@ header {
     background: rgba(0, 0, 0, 0.6) url('images/section2.png') no-repeat top center;
     height: 100%;
     border: 2px solid black;
-
 }
 
 .about_items {
     width: 50%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    margin-left: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .item {
     overflow: hidden;
-    margin: 50px 0;
+    margin: 70px 0;
 }
 
 .item:hover h3 {
@@ -186,8 +191,6 @@ header {
     transition: .5s;
 }
 
-.item span {}
-
 .item span h3 {
     color: rgb(83, 167, 236);
     font-size: 26px;
@@ -208,5 +211,323 @@ header {
 /* ########## section: project ########### */
 /* ########## section: plan ########### */
 /* ########## section: awards ########### */
+
+#awards.cd-section h2 {
+    line-height: 1;
+}
+
+.awards_inner {
+    height: 100%;
+    color: #fff;
+}
+
+.awards_list {
+    width: 1000px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.awards_list span {
+    position: absolute;
+    top: -5px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.awards_list span:nth-child(2) {
+    left: 34%;
+}
+
+.awards_list span:nth-child(3) {
+    left: 67%;
+}
+
+.awards_list span:nth-child(4) {
+    left: 100%;
+}
+
+.about_awards {
+    position: relative;
+    width: 1100px;
+    height: 1px;
+    display: block;
+    margin: 220px auto;
+    z-index: 1000;
+}
+
+.about_heading {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    z-index: 100;
+    text-align: left;
+    width: 150px;
+}
+
+.about_heading:nth-child(2) {
+    left: 32%;
+}
+
+.about_heading:nth-child(3) {
+    left: 62%;
+}
+
+.about_heading:nth-child(4) {
+    left: 90%;
+}
+
+
+.award_box_img {
+    margin-top: 20px;
+}
+
+.about_heading span {
+    font-size: 14px;
+    color: gray;
+}
+
+.about_heading span em {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    line-height: 2;
+    color: #fff;
+    font-style: normal;
+}
+
+
+
+.about_heading p {
+    color: #e5e5e5;
+    padding: 10px 0;
+}
+
+.view_awards {
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color: #eee;
+    padding: 5px 20px;
+    color: #1db1f0;
+    transition: .3s;
+}
+
+.view_awards:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.award_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.award_img:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 4, 37);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .9;
+}
+
 /* ########## section: location ########### */
+.location_inner {
+    background: url('images/background-location.jpg') no-repeat center center;
+    height: 100%;
+    position: relative;
+}
+
+.location_inner:before {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+}
+
+.feature {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #eee;
+    overflow: hidden;
+}
+
+.office {
+    width: 60%;
+    text-align-last: left;
+    float: left;
+}
+
+.office .headquaters {
+    margin-bottom: 50px;
+}
+
+
+.cd-section .headquaters h2,
+.cd-section .customer h2 {
+    line-height: 1 !important;
+}
+
+.office b {
+    font-weight: normal;
+}
+
+.office h2 {
+    color: #1db1f0;
+    font-weight: bold;
+    margin: 15px 0 0;
+    margin-top: 15px;
+}
+
+.office p {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.office span {
+    color: #999;
+}
+
+.service {
+    width: 40%;
+    float: left;
+    padding-left: 30px;
+}
+
+.service_item {
+    margin-bottom: 25px;
+}
+
+.service_item .fa {
+    color: #1db1f0;
+    font-size: 40px;
+}
+
+.service_item h3 {
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+}
+
+.service_item p {}
+
+
 /* ########## section: contact ########### */
+.contact_inner {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.contact_feature {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact_feature>div {
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
+
+.contact_form h3 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.send_box label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+    margin-top: 20px;
+}
+
+.send_box label span {
+    color: crimson;
+    font-weight: bold;
+}
+
+.send_box input[type='email'],
+.send_box input[type='text'],
+.send_box textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    transition: .5s;
+}
+
+.send_box input[type='email']:hover,
+.send_box input[type='text']:hover,
+.send_box textarea:hover {
+    border: 1px solid #0088cc;
+    box-shadow: 0 0 5px #0088cc;
+}
+
+.send_box input[type='email']:focus,
+.send_box input[type='text']:focus,
+.send_box textarea:focus {
+    background-color: #eee;
+}
+
+.send_box button {
+    background-color: #0088cc;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 10px;
+}
+
+.send_box button:hover {
+    background-color: #000;
+}
+
+.contact_info {
+    border-left: 1px solid rgb(189, 189, 189);
+    margin-top: 20px;
+}
+
+.contact_info h4 {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.contact_info ul li {
+    line-height: 2em;
+}
+
+.contact_info ul li:last-child {
+    color: #0088cc;
+}
+
+.contact_info p {
+    line-height: 1.5em;
+}
