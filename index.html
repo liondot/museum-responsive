@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Museum</title>
+  <link rel="icon" href="images/favicon.png">
   <script src="js/jquery-2.1.4.js"></script>
   <!-- Page Scroll Effects JS & CSS -->
   <script src="js/velocity/modernizr.js"></script>
@@ -15,6 +16,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <!-- Smooth Scrolling  -->
   <script src="js/jquery.scrollTo.min.js"></script>
+  <!-- slick.js  -->
+  <script src="js/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="js/slick/slick-theme.css">
+  <link rel="stylesheet" href="js/slick/slick.css">
+  <!-- Featherlight.js  -->
+  <script src="js/featherlight/featherlight.js"></script>
+  <link rel="stylesheet" href="js/featherlight/featherlight.css">
   <!-- Custom JS & CSS -->
   <script src="custom.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -22,12 +30,24 @@
 </head>
 <!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
 
-<body data-hijacking="off" data-animation="scaleDown">
+<body data-hijacking="on" data-animation="scaleDown">
   <div class="container">
       <section id="home" class="cd-section visible">
         <div>
           <div class="content">
-              <img src="images/section1.jpg" alt="">
+              <div class="home_inner">
+                  <div class="welcome_text">
+                      <i class="fas fa-quote-left"></i> 
+                    <span>Welcome to Museum </span>
+                    <p>Tempore sapiente distinctio aperiam, temporibus consectetur omnis quod quibusdam quia. Odit, rem.</p>
+                    <i class="fas fa-quote-right"></i></div>
+                  <div class="opacity_img"></div>
+                  <div class="home_heading">
+                      <span>Creative</span>
+                      <span>Museum</span>
+                      <span>Specialists</span>
+                  </div>
+              </div>
           </div>
         </div>
       </section>
@@ -65,14 +85,179 @@
       <section id="project" class="cd-section">
         <div>
             <div class="content">
-                <img src="images/section3.jpg" alt="">
+                <div class="project_inner">
+                    <input type="radio" name="tabmenu" id="tab1" checked>
+                    <input type="radio" name="tabmenu" id="tab2">
+                    <input type="radio" name="tabmenu" id="tab3">
+                    <div class="tabs">
+                        <div class="tab">
+                            <div class="project_info" data-text="01">
+                                <h3>Project : Glass Wall Museum</h3>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dicta obcaecati veritatis, delectus, quam magni molestias porro, deserunt impedit magnam atque dolorem perspiciatis maiores omnis cumque dignissimos autem. Illo, sit!
+                                </p>
+                                <ul>
+                                    <li><b>Area</b>: 1670 m2</li>
+                                    <li><b>Completed Date</b> : September 2018</li>
+                                    <li><b>Artist</b> : Andrew Yu</li>
+                                </ul>
+                                <div class="detail">
+                                    <div>
+                                        <span>1</span>WORKING
+                                    </div>
+                                    <div>
+                                        <span>248</span>ATTENDANCE
+                                    </div>
+                                    <div>
+                                        <span>1984</span>YEAR
+                                    </div>
+                                </div>
+                                <a class="view_project" href="project-detail-01.html" data-featherlight="iframe"><i class="fa fa-long-arrow-right">View Project</i></a>
+                            </div>
+                            <div class="project_photo">
+                                <img src="images/project-main-01-01.jpg" alt="">
+                                <img src="images/project-main-01-02.jpg" alt="">
+                                <img src="images/project-main-01-03.jpg" alt="">
+                                <img src="images/project-main-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="project_info" data-text="02">
+                                <h3>Project : Glass Wall Museum</h3>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dicta obcaecati veritatis, delectus, quam magni molestias porro, deserunt impedit magnam atque dolorem perspiciatis maiores omnis cumque dignissimos autem. Illo, sit!
+                                </p>
+                                <ul>
+                                    <li><b>Area</b>: 1670 m2</li>
+                                    <li><b>Completed Date</b> : September 2018</li>
+                                    <li><b>Artist</b> : Andrew Yu</li>
+                                </ul>
+                                <div class="detail">
+                                    <div>
+                                        <span>1</span>WORKING
+                                    </div>
+                                    <div>
+                                        <span>248</span>ATTENDANCE
+                                    </div>
+                                    <div>
+                                        <span>1984</span>YEAR
+                                    </div>
+                                </div>
+                                <a class="view_project" href="project-detail-02.html"><i class="fa fa-long-arrow-right">View Project</i></a>
+                            </div>
+                            <div class="project_photo">
+                                <img src="images/project-main-01-01.jpg" alt="">
+                                <img src="images/project-main-01-02.jpg" alt="">
+                                <img src="images/project-main-01-03.jpg" alt="">
+                                <img src="images/project-main-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="project_info" data-text="03">
+                                <h3>Project : Glass Wall Museum</h3>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dicta obcaecati veritatis, delectus, quam magni molestias porro, deserunt impedit magnam atque dolorem perspiciatis maiores omnis cumque dignissimos autem. Illo, sit!
+                                </p>
+                                <ul>
+                                    <li><b>Area</b>: 1670 m2</li>
+                                    <li><b>Completed Date</b> : September 2018</li>
+                                    <li><b>Artist</b> : Andrew Yu</li>
+                                </ul>
+                                <div class="detail">
+                                    <div>
+                                        <span>1</span>WORKING
+                                    </div>
+                                    <div>
+                                        <span>248</span>ATTENDANCE
+                                    </div>
+                                    <div>
+                                        <span>1984</span>YEAR
+                                    </div>
+                                </div>
+                                <a class="view_project" href="project-detail-03.html"><i class="fa fa-long-arrow-right">View Project</i></a>
+                            </div>
+                            <div class="project_photo">
+                                <img src="images/project-main-01-01.jpg" alt="">
+                                <img src="images/project-main-01-02.jpg" alt="">
+                                <img src="images/project-main-01-03.jpg" alt="">
+                                <img src="images/project-main-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <label for="tab1"></label>
+                        <label for="tab2"></label>
+                        <label for="tab3"></label>
+                    </div>
+                </div>
             </div>
         </div>
       </section>
       <section id="plan" class="cd-section">
         <div>
             <div class="content">
-                <img src="images/section4.jpg" alt="">
+                <div class="plan_inner">
+                    <div class="plan_feature">
+                        <div class="plan_info">
+                            <div class="plan_heading">
+                                <h2>Planning<br> For the Next Project</h2>
+                                <hr class="bar">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam fugit obcaecati neque deserunt dicta omnis possimus soluta vel rem. Quaerat deserunt illum, ratione nostrum iste vel id! Iste nemo rem, commodi ipsam libero dolorem, laborum esse quasi suscipit vero nisi explicabo possimus enim adipisci, ducimus ab porro velit eius perferendis?</p>
+                            </div>
+                            <div class="plan_photo">
+                                <img src="images/plan_img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="history_info">
+                            <h2>History</h2>
+                            <hr class="bar">
+                            <div class="history_slider">
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2015</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2016</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2017</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2018</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2019</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2020</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4>The Project <br>of Museum for the <span>2021</span></h4>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quidem, ad laboriosam dolore blanditiis eligendi est sed dolores. Perspiciatis nihil sunt vitae, commodi odio laboriosam optio corrupti earum animi quas quo architecto quasi dignissimos?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </section>
@@ -105,7 +290,7 @@
                             <a href="#none" class="view_awards" target="_blank">VIEW MORE</a>
                         </div>
                         <div class="about_heading">
-                            <span><em>CUSTOMEM SERVISE</em> <br>2017.11.25</span>
+                            <span><em>CUSTOMER SERVISE</em> <br>2017.11.25</span>
                             <img src="images/award_3.png" class="award_box_img" alt="">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, in.
@@ -223,7 +408,7 @@
       <header>
         <div class="gnb-inner">
             <div class="logo">
-                <a href="#none">Museum Logo</a>
+                <a href="#"><img src="images/museum_logo_wite.png" alt=""></a>
             </div>
             <div class="gnb">
                 <div class="menu">
@@ -240,17 +425,19 @@
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </div>  
         </div>
     </header>
   </div>
   <a href="#" class="gototop"><img src="images/gototop.png" alt=""></a>
   <a href="" class="btn_hiring"><i class="fa fa-commenting"></i>Hiring</a>
+  <!-- sns  -->
   <div class="sns">
       <a href="#"><i class="fab fa-instagram"><p>인스타</p></i></a>
       <a href="#"><i class="fab fa-facebook-square"><p>페이스북</p></i></a>
       <a href="#"><i class="fab fa-twitter"></i><p>트위터</></a>
   </div>
+  <!-- scroll text -->
   <div class="scroll_txt">
     <p>SCROLL</p>
  </div>

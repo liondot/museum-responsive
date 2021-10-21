@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+.cd-section h2 {
+    line-height: unset;
+}
+
 /* default css  */
 body {
     font-size: 'Montserrat', sans-serif;
@@ -152,6 +156,143 @@ header {
 }
 
 /* ########## section: home ########### */
+.home_inner {
+    background-color: #fff;
+    height: 100%;
+}
+
+.home_inner:before {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: overlay 1s 1.5s ease-in-out both;
+}
+
+.welcome_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.2em;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    animation: slideup 2s linear;
+    animation-fill-mode: both;
+}
+
+.welcome_text i.fas {
+    margin: 10px 0;
+    display: block;
+}
+
+.welcome_text span {
+    margin: 30px 0;
+    display: block;
+}
+
+.opacity_img {
+    background: url(images/section1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    opacity: 0;
+    animation: opacity_image 1s 2.5s ease-in both;
+}
+
+.home_heading {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+}
+
+.home_heading span {
+    display: block;
+    font-size: 115px;
+    color: #fff;
+    font-weight: 600;
+    width: 0;
+    overflow: hidden;
+    animation: reveal 1s 3s ease-in-out both;
+}
+
+.home_heading span:nth-child(1) {
+    animation-delay: 2.5s;
+}
+
+.home_heading span:nth-child(2) {
+    animation-delay: 3.2s;
+}
+
+.home_heading span:nth-child(3) {
+    animation-delay: 3.4s;
+}
+
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        margin-top: 50px;
+    }
+
+    20% {
+        opacity: 1;
+        margin-top: 0;
+    }
+
+    80% {
+        opacity: 1;
+        margin-top: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes overlay {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+
+}
+
+@keyframes reveal {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+
+@keyframes opacity_image {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* ########## section: about ########### */
 .about_inner {
     background: rgba(0, 0, 0, 0.6) url('images/section2.png') no-repeat top center;
@@ -209,12 +350,278 @@ header {
 }
 
 /* ########## section: project ########### */
+.project_inner {
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid #ddd;
+}
+
+.tabs {
+    height: 100%;
+    width: 300%;
+    transition: .5s;
+}
+
+.tab {
+    height: 100%;
+    float: left;
+    width: 33.3333%;
+}
+
+.tab>div {
+    height: 100%;
+    float: left;
+}
+
+.project_info {
+    width: 25%;
+}
+
+.project_photo {
+    width: 75%;
+    overflow: hidden;
+}
+
+input[name=tabmenu] {
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 25%;
+    text-align: center;
+}
+
+.btn label {
+    cursor: pointer;
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 8px;
+    position: relative;
+}
+
+.btn label:before {
+    content: '';
+    display: inline-block;
+    border: 1px soild transparent;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    transition: .3s;
+}
+
+.btn label:hover:before {
+    border: 1px solid #aaa;
+}
+
+.input[id=tab1]:checked~.btn label[for=tab1]:before,
+.input[id=tab2]:checked~.btn label[for=tab2]:before,
+.input[id=tab3]:checked~.btn label[for=tab3]:before {
+    border: 1px solid #aaa;
+}
+
+input[id=tab1]:checked~.tabs {
+    margin-left: 0;
+}
+
+input[id=tab2]:checked~.tabs {
+    margin-left: -100%;
+}
+
+input[id=tab3]:checked~.tabs {
+    margin-left: -200%;
+}
+
+.project_info {
+    padding: 50px;
+    position: relative;
+}
+
+.project_info h3 {
+    font-size: 20px;
+    position: relative;
+}
+
+.project_info p {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.project_info ul {
+    line-height: 2em;
+    margin: 30px 0;
+}
+
+.project_info ul li:before {
+    content: "\f105";
+    font-family: fontawesome;
+    margin-right: 10px;
+}
+
+.detail {
+    margin-bottom: 50px;
+}
+
+.detail div {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    color: #999;
+    font-size: 14px;
+}
+
+.detail div span {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.view_project {
+    background-color: #3f3f3f;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 220px;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    transition: .5s
+}
+
+.view_project:hover {
+    background-color: #000;
+}
+
+.view_project .fa {
+    transition: .5s;
+}
+
+.view_project:hover .fa {
+    margin-left: 30px;
+}
+
+.project_info:before {
+    content: attr(data-text);
+    font-size: 130px;
+    color: rgb(218, 218, 218);
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
 /* ########## section: plan ########### */
+.plan_inner {
+    background-color: #1d1b24;
+    height: 100%;
+}
+
+.plan_feature {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plan_feature>div {
+    height: 300px;
+    color: #bbb;
+}
+
+.plan_info>div {
+    float: left;
+}
+
+.plan_heading {
+    width: 70%;
+    padding-right: 50px;
+}
+
+.plan_heading h2,
+.history_info h2 {
+    color: #fff;
+    margin: 0;
+    text-align: left;
+}
+
+.plan_heading p {
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+.plan_photo {
+    width: 30%;
+    overflow: hidden;
+    height: auto;
+}
+
+.plan_photo img {
+    height: 265px;
+}
+
+.plan_heading hr.bar,
+.history_info hr.bar {
+    background-color: dodgerblue;
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    border-radius: 20px;
+    border: none;
+}
+
+.history_slider div {
+    outline: none;
+}
+
+.history_slider div h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+.history_slider div h4 span {
+    color: dodgerblue;
+}
+
+.history_slider div p {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+/* slick.js custom css  */
+.history_slider .slick-arrow {
+    display: none;
+}
+
+.history_slider .slick-dots li button:before {
+    color: #fff;
+    font-size: 40px;
+}
+
+.history_slider .slick-dots li {
+    margin: 0;
+}
+
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
+
 /* ########## section: awards ########### */
 
-#awards.cd-section h2 {
-    line-height: 1;
-}
 
 .awards_inner {
     height: 100%;
@@ -259,7 +666,7 @@ header {
     width: 1100px;
     height: 1px;
     display: block;
-    margin: 220px auto;
+    margin: 160px auto;
     z-index: 1000;
 }
 
@@ -303,8 +710,6 @@ header {
     font-style: normal;
 }
 
-
-
 .about_heading p {
     color: #e5e5e5;
     padding: 10px 0;
@@ -320,7 +725,7 @@ header {
 }
 
 .view_awards:hover {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
 }
 
@@ -336,7 +741,7 @@ header {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 4, 37);
+    background-color: rgba(0, 0, 0, 0.993);
     position: absolute;
     top: 0;
     left: 0;
@@ -530,4 +935,112 @@ header {
 
 .contact_info p {
     line-height: 1.5em;
+}
+
+/* ########## Subpage: Project ########### */
+/* .hiring_main.project_main1 {
+    background: url(images/project-main-01-01.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hiring_main.project_main2 {
+    background: url(images/project-main-02-01.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hiring_main.project_main3 {
+    background: url(images/project-main-03-01.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hiring_main.project_main1 .hiring_heading,
+.hiring_main.project_main2.hiring_heading,
+.hiring_main.project_main3 .hiring_heading {
+    color: #fff;
+    width: 100%;
+    animation: slidedown 1s linear both;
+}
+
+.hiring_main.project_main1 .hiring_heading h1,
+.hiring_main.project_main2 .hiring_heading h1,
+.hiring_main.project_main3 .hiring_heading h1 {
+    font-size: 70px;
+}
+
+.project_detail .hiring_info {
+    margin-bottom: 0;
+}
+
+.project_detail .hiring_slogan p:before {
+    left: -100px;
+}
+
+.photo.project_info {
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 120px;
+}
+
+.project_detail .hiring_heading span:before,
+.project-detail .hiring_heading span:after {
+    background-color: #fff;
+}
+
+@keyframes slidedown {
+    0% {
+        opacity: 0;
+        margin-top: -50px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+} */
+
+
+/* Featherlight Custom CSS */
+.featherlight .featherlight-content {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: auto;
+    padding: 0;
+    border-bottom: 25px solid transparent;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 100%;
+    background: #fff;
+    cursor: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.featherlight iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.featherlight .featherlight-close-icon {
+    position: absolute;
+    z-index: 9999;
+    top: 30px;
+    right: 70px;
+    line-height: 25px;
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border: none;
+    padding: 0;
+    font-size: 40px;
+    outline: none;
 }
