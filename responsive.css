@@ -23,6 +23,12 @@
         border-bottom: 1px solid #eee;
     }
 
+
+
+    .logo.active {
+        background: url(images/museum_logo.png) no-repeat center center;
+    }
+
     .menu {
         display: block;
     }
@@ -128,6 +134,227 @@
         right: 20px;
         bottom: 20px;
     }
+
+    /* Show Hide section */
+    /* #home, */
+    /* #about, */
+    /* #project, */
+    /* #plan, */
+    /* #awards, */
+    /* #location, */
+    /* #contact {
+        display: none;
+    } */
+
+    /* ################# Section : Home ################ */
+    .home_inner {
+        height: 100vh;
+    }
+
+    .welcome_text {
+        transform: translate(-50%, -50%) scale(.7);
+        font-size: 28px;
+    }
+
+    .home_heading {
+        left: 20px;
+    }
+
+    .home_heading span {
+        font-size: 50px;
+    }
+
+    /* ################# Section : about ################ */
+    .about_inner {
+        height: auto;
+        padding: 20px;
+    }
+
+    .about_items {
+        width: 100%;
+        position: static;
+        margin-left: 0;
+        transform: none;
+        text-align: center;
+    }
+
+    .item {
+        margin: 30px 0;
+    }
+
+    .item img {
+        float: none;
+        margin-right: 0;
+        height: 75px;
+        padding: 15px;
+    }
+
+    .item span h3 {
+        font-size: 20px;
+    }
+
+    .item span p {
+        font-size: 16px;
+    }
+
+    /* ################# Section : project ################ */
+    .project_inner {
+        height: auto;
+    }
+
+    .tab>div {
+        float: none;
+        width: 100%;
+    }
+
+    .view_project {
+        width: 100%;
+    }
+
+    .project_info {
+        padding: 20px;
+    }
+
+    .project_info p {
+        position: relative;
+    }
+
+    .detail div {
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        bottom: 2px;
+    }
+
+    /* ################# Section : plan ################ */
+    .plan_inner {
+        height: auto;
+        padding: 20px;
+    }
+
+    .plan_feature {
+        width: 100%;
+        position: static;
+        transform: none;
+    }
+
+    .plan_feature>div {
+        height: auto;
+    }
+
+    .plan_info {
+        margin-bottom: 40px;
+    }
+
+    .plan_info>div {
+        float: none;
+        width: 100%;
+    }
+
+    .plan_photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .plan_heading {
+        padding-right: 0;
+    }
+
+    /* ################# Section : awards ################ */
+    .awards_inner {
+        height: 1000px;
+    }
+
+    .awards_list {
+        display: none;
+    }
+
+    .awards_list span {
+        display: none;
+    }
+
+    .about_awards {
+        width: 100%;
+        position: static;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .about_heading {
+        top: 0;
+        left: 0%;
+        width: 150px;
+        text-align: center;
+        position: static;
+        margin: 30px 10px;
+    }
+
+    .award_img {
+        overflow: hidden;
+    }
+
+
+    /* ################# Section : location ################ */
+    .location_inner {
+        height: auto;
+    }
+
+    .feature {
+        width: 100%;
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+    }
+
+    .feature>div {
+        float: none;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* ################# Section : contact ################ */
+    .contact_inner {
+        height: auto;
+    }
+
+    .contact_feature {
+        width: 100%;
+        position: static;
+        transform: none;
+    }
+
+    .contact_feature>div {
+        float: none;
+        width: 100%;
+    }
+
+    /* scroll_text  */
+    .scroll_txt {
+        display: none;
+    }
+
+    /* sns  */
+    .sns {
+        right: -100px;
+        left: unset;
+        z-index: 100;
+        transition: .3s;
+    }
+
+    .sns a {
+        color: dodgerblue;
+    }
+
+    .sns.active {
+        right: 20px;
+    }
+
 
 
 
