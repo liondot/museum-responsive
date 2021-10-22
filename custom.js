@@ -6,7 +6,6 @@ $(function(){
     });
     $('section, .menu a').click(function(){
         $('.gnb, .trigger, .sns').removeClass('active');
-        // $('.trigger').removeClass('active');
     });
 
     // Smooth Scrolling 
